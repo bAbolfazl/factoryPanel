@@ -80,8 +80,11 @@ li {
   margin-top: 5px !important;
   opacity: 0.8 !important;
   font-weight: normal !important;
+  font-size: 0.9rem;
 }
 .custom-input {
+  position: relative;
+  font-family: "IranSans" !important;
   transition: 0.4s;
   background: #ffffff;
   border: 1px solid rgba(252, 164, 15, 0.4);
@@ -154,7 +157,7 @@ li {
 
   width: 560px !important;
   color: #13213c !important;
-  max-width: 85% !important;
+  max-width: 90% !important;
   padding-bottom: 75px !important;
 }
 .swal2-container {
@@ -180,6 +183,18 @@ li {
 .swal2-confirm:focus,
 .swal2-cancel:focus {
   box-shadow: none !important;
+}
+.bigModal .swal2-actions {
+  justify-content: space-around;
+}
+.bigModal .swal2-actions .swal2-styled {
+  margin: 0 !important;
+  margin-bottom: 40px !important;
+  flex-basis: 45% !important;
+  justify-content: space-between;
+}
+.bigModal .swal2-actions {
+  flex-direction: row-reverse !important;
 }
 .swal2-actions {
   display: flex;
@@ -215,6 +230,10 @@ li {
   height: 518px;
   width: 470px !important;
   max-height: 90%;
+}
+.bigModal {
+  height: 725px;
+  width: 880px !important;
 }
 .editModal .swal2-actions {
   flex-direction: column-reverse;
@@ -282,14 +301,16 @@ li {
 .containerRadio {
   display: block;
   position: relative;
-  padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  flex-basis: 50%;
+
+  padding-right: 35px !important;
+  text-align: right !important;
 }
 
 /* Hide the browser's default radio button */
@@ -330,6 +351,7 @@ li {
 /* Show the indicator (dot/circle) when checked */
 .containerRadio input:checked ~ span {
   color: #fca40f;
+  transition: 0.3s;
 }
 .containerRadio input:checked ~ .checkmark:after {
   display: block;
@@ -349,4 +371,101 @@ li {
   height: 12px;
   border-radius: 50%;
   background: #fca40f;
+}
+
+/* custom select  */
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  width: 200px;
+  width: 100% !important;
+  height: 70px !important;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  /* background-color: DodgerBlue; */
+  width: 100%;
+  text-align: right;
+  margin-top: 0 !important;
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  /* height: 0; */
+  /* border: 6px solid transparent; */
+  /* border-color: #fff transparent transparent transparent; */
+
+  top: 24px;
+  left: 10px;
+  /* border: 6px solid transparent; */
+  /*! border-color: #000 transparent transparent transparent; */
+  /* color: black; */
+  background: center no-repeat url("../icons/arrowRev.svg");
+  background-size: contain;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.parent-select-arrow-active {
+  border-bottom: #fca40f solid 4px;
+  background: #fff8ed;
+}
+.select-selected.select-arrow-active:after {
+  /* border-color: transparent transparent #fff transparent; */
+  /* top: 25px; */
+  background: center no-repeat url("../icons/arrow.svg");
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  color: #989da8;
+  padding: 8px 16px;
+  /* border: 1px solid transparent; */
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 7.5px !important;
+  transition: 0.3s;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #f0f0f0;
+  top: calc(100% + 9px);
+  border-radius: 15px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  text-align: right;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background-color: #fca40f;
+  color: white !important;
+}
+
+.small-label {
+  position: absolute;
+  left: 25px;
+  bottom: 17px;
+  font-size: 0.6em;
+  opacity: 0.5;
+  font-weight: normal !important;
 }
