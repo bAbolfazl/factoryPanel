@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- styles -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/styles/global.css" />
+    <link rel="stylesheet" href="./assets/styles/login.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <header
+        class="d-flex align-items-center justify-content-center justify-content-lg-start opacity-75"
+      >
+        <div class="ps-4"><a href="#">مدیریت محصولات</a></div>
+        <div>نسخه ۱.۰</div>
+      </header>
+    </div>
+
+    <main>
+      <div class="container">
+        <div
+          class="box mx-auto d-flex align-items-center mx-auto lg-margin-none mb-5"
+        >
+          <div>
+            <div class="d-flex align-items-center">
+              <div>۰۹۱۰۲۱۱۹۱۱۸</div>
+              <div class="me-2 edit">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M15 22.75H9C3.57 22.75 1.25 20.43 1.25 15V9C1.25 3.57 3.57 1.25 9 1.25H11C11.41 1.25 11.75 1.59 11.75 2C11.75 2.41 11.41 2.75 11 2.75H9C4.39 2.75 2.75 4.39 2.75 9V15C2.75 19.61 4.39 21.25 9 21.25H15C19.61 21.25 21.25 19.61 21.25 15V13C21.25 12.59 21.59 12.25 22 12.25C22.41 12.25 22.75 12.59 22.75 13V15C22.75 20.43 20.43 22.75 15 22.75Z"
+                    fill="#FCA40F"
+                  />
+                  <path
+                    d="M8.49984 17.6901C7.88984 17.6901 7.32984 17.4701 6.91984 17.0701C6.42984 16.5801 6.21984 15.8701 6.32984 15.1201L6.75984 12.1101C6.83984 11.5301 7.21984 10.7801 7.62984 10.3701L15.5098 2.49006C17.4998 0.500059 19.5198 0.500059 21.5098 2.49006C22.5998 3.58006 23.0898 4.69006 22.9898 5.80006C22.8998 6.70006 22.4198 7.58006 21.5098 8.48006L13.6298 16.3601C13.2198 16.7701 12.4698 17.1501 11.8898 17.2301L8.87984 17.6601C8.74984 17.6901 8.61984 17.6901 8.49984 17.6901ZM16.5698 3.55006L8.68984 11.4301C8.49984 11.6201 8.27984 12.0601 8.23984 12.3201L7.80984 15.3301C7.76984 15.6201 7.82984 15.8601 7.97984 16.0101C8.12984 16.1601 8.36984 16.2201 8.65984 16.1801L11.6698 15.7501C11.9298 15.7101 12.3798 15.4901 12.5598 15.3001L20.4398 7.42006C21.0898 6.77006 21.4298 6.19006 21.4798 5.65006C21.5398 5.00006 21.1998 4.31006 20.4398 3.54006C18.8398 1.94006 17.7398 2.39006 16.5698 3.55006Z"
+                    fill="#FCA40F"
+                  />
+                  <path
+                    d="M19.8501 9.83003C19.7801 9.83003 19.7101 9.82003 19.6501 9.80003C17.0201 9.06003 14.9301 6.97003 14.1901 4.34003C14.0801 3.94003 14.3101 3.53003 14.7101 3.41003C15.1101 3.30003 15.5201 3.53003 15.6301 3.93003C16.2301 6.06003 17.9201 7.75003 20.0501 8.35003C20.4501 8.46003 20.6801 8.88003 20.5701 9.28003C20.4801 9.62003 20.1801 9.83003 19.8501 9.83003Z"
+                    fill="#FCA40F"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              class="text--orange"
+              id="timer"
+              style="direction: ltr; text-align: right"
+            ></div>
+          </div>
+          <button
+            class="btn btn-warning button--orange"
+            id="resetButton"
+            disabled
+          >
+            ارسال‌مجددکد
+          </button>
+        </div>
+        <div
+          class="dark-section mx-auto d-flex align-items-center mx-auto lg-margin-none"
+        >
+          <img src="./assets/icons/info-circle.svg" class="ms-2" />
+          کد ۵ رقمی ارسال شده به شماره خود را وارد کنید
+        </div>
+        <div
+          class="warn-section text--red d-none mx-auto d-flex align-items-center mx-auto lg-margin-none"
+        >
+          <img src="./assets/icons/warn.svg" class="ms-2" />
+          کد وارد شده صحیح نمی‌باشد
+        </div>
+        <div
+          class="code-section mx-auto mt-3 d-flex align-items-center justify-content-between mx-auto lg-margin-none"
+        >
+          <input class="input-code" id="input0" type="text" class="mt-1" />
+          <input class="input-code" id="input1" type="text" class="mt-1" />
+          <input class="input-code" id="input2" type="text" class="mt-1" />
+          <input class="input-code" id="input3" type="text" class="mt-1" />
+          <input class="input-code" id="input4" type="text" class="mt-1" />
+        </div>
+
+        <div
+          class="mx-auto lg-margin-none text-center lg-text-right d-none d-lg-block"
+        >
+          <button class="button btn btn-dark">ورود</button>
+        </div>
+        <div class="mobile-submit d-lg-none">
+          <button class="button btn btn-dark">ورود</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- background images -->
+    <div>
+      <div class="bg-left d-lg-block d-none"></div>
+      <div class="bg-left2 d-lg-flex d-none">
+        <img src="./assets/images/Fingerprint-bro.png" alt="" />
+      </div>
+      <div class="bg-right d-lg-block d-none"></div>
+
+      <!-- mobile -->
+      <div class="bg-right--mobile d-lg-none d-block"></div>
+      <div class="bg-left--mobile d-lg-none d-block"></div>
+    </div>
+
+    <script src="./assets/js/utils.js"></script>
+    <script src="./assets/js/login.js"></script>
+  </body>
+</html>

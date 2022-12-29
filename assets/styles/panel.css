@@ -1,0 +1,240 @@
+aside {
+  width: 275px;
+  flex-basis: 275px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: white;
+
+  padding: 25px;
+  font-size: 1.1rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.aside_icon {
+  width: 50px;
+  height: 50px;
+  background-color: #e8e7e7;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+aside ul li {
+  margin-bottom: 5px;
+  transition: 0.4s;
+}
+aside ul {
+  padding-top: 35%;
+}
+
+aside li {
+  border-radius: 20px;
+  padding: 10px;
+}
+
+aside li:hover {
+  background-color: #f2f2f2;
+}
+.mobileMenu li.active #homeIcon path:first-child {
+  fill: #717a8a;
+  stroke: #717a8a;
+}
+li.active #homeIcon path:last-child {
+  stroke: #13213c !important;
+}
+.mobileMenu li.active::before {
+  content: "";
+  position: absolute;
+  display: inherit;
+  display: inline-block;
+  height: 3px;
+  width: 40px;
+  bottom: 0;
+  background: #13213c;
+  border-radius: 5px 5px 0px 0px;
+}
+aside li.active #homeIcon path:first-child {
+  fill: #717a8a;
+}
+aside li.active #homeIcon path:last-child {
+  stroke: #fff !important;
+}
+
+aside li.active #userIcon path:first-child {
+  fill: #717a8a;
+}
+aside li.active #userIcon path:nth-child(2) {
+  fill: white;
+  stroke: transparent;
+}
+aside li.active #userIcon path:last-child {
+  stroke: transparent !important;
+  fill: white !important;
+}
+
+aside li.active #homeIcon2 path:first-child {
+  fill: white !important;
+  stroke: white !important;
+}
+aside li.active #homeIcon2 path:nth-child(2) {
+  fill: #717a8a !important;
+  stroke: #717a8a !important;
+}
+aside li.active #homeIcon2 path:nth-child(3) {
+  fill: white !important;
+  stroke: white !important;
+}
+aside li.active #homeIcon2 path:last-child {
+  stroke: white !important;
+  fill: white !important;
+}
+
+aside li.active .aside_icon {
+  background-color: #13213c;
+}
+aside li.active {
+  background: #f2f2f2;
+  font-weight: bold;
+}
+
+/* mobile menu */
+.mobileMenu > div {
+  height: 90px;
+  border-radius: 25px 25px 0 0;
+}
+.mobileMenu .aside_icon {
+  background-color: transparent;
+}
+.mobileMenu a {
+  height: 100%;
+}
+.mobileMenu li {
+  position: relative;
+  height: 100%;
+}
+.mobileMenu {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* main */
+
+main {
+  padding: 0 125px;
+  padding-left: 190px;
+  max-width: calc(100% - 275px);
+}
+@media only screen and (max-width: 1400px) {
+  main {
+    padding: 0 70px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  main {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .big-card,
+  .outed-card {
+    width: 155px;
+  }
+}
+
+.panle-bg.left {
+  right: unset;
+  left: -40px;
+  top: 100px;
+}
+.panle-bg {
+  top: 0;
+  right: 0;
+
+  width: 90px;
+  height: 90px;
+  background: no-repeat center url("../images/panelRightBg.svg");
+  background-size: contain;
+
+  right: -50px;
+  z-index: -1;
+  top: 50px;
+}
+.bgMob1 {
+  position: absolute;
+  right: -30px;
+  bottom: 0px;
+  z-index: -1;
+  width: 60px;
+}
+.bgMob2 {
+  position: absolute;
+  left: -35px;
+  bottom: -5px;
+  z-index: -1;
+  width: 60px;
+}
+/* cards */
+.big-card img {
+  width: 45px;
+  object-fit: contain;
+}
+.big-card {
+  background: #ffffff;
+  border-radius: 30px;
+  width: 196px;
+  height: 235px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 35px;
+  margin: 0 15px;
+}
+
+.outed-card button {
+  text-decoration: none;
+}
+.outed-card {
+  width: 196px;
+  height: 190px;
+  background-color: white;
+  border-radius: 30px;
+
+  padding: 15px;
+  padding-top: 45px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  direction: rtl;
+
+  margin: 0 15px;
+}
+.outed-card__image {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: -20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.outed-card--curved .outed-card__image {
+  position: initial;
+}
+.outed-card--curved {
+  border-radius: 98px 98px 30px 30px !important;
+  width: 196px;
+  height: 248px;
+  padding: 15px;
+}

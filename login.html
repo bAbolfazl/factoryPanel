@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- styles -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/styles/global.css" />
+    <link rel="stylesheet" href="./assets/styles/login.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <header
+        class="d-flex align-items-center justify-content-center justify-content-lg-start opacity-75"
+      >
+        <div class="ps-4"><a href="#">مدیریت محصولات</a></div>
+        <div>نسخه ۱.۰</div>
+      </header>
+    </div>
+
+    <main>
+      <div class="container">
+        <div
+          class="dark-section mx-auto d-flex align-items-center mx-auto lg-margin-none"
+        >
+          <img src="./assets/icons/info-circle.svg" class="ms-2" />
+          برای ورود شماره موبایل خود را وارد کنید٬ کد ۵ رقمی به شماره موبایل شما
+          ارسال خواهد شد
+        </div>
+        <div
+          class="light-section mx-auto mt-3 d-flex align-items-center mx-auto lg-margin-none"
+        >
+          <label>
+            <div>شماره موبایل</div>
+            <input
+              type="text"
+              maxlength="11"
+              class="mt-1 opacity-75"
+              style="letter-spacing: 2px"
+            />
+          </label>
+        </div>
+
+        <div class="mx-auto lg-margin-none text-center lg-text-right">
+          <button class="button btn btn-dark">دریافت کد</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- background images -->
+    <div>
+      <div class="bg-left d-lg-block d-none"></div>
+      <div
+        class="bg-left2 d-lg-flex align-items-center justify-content-center d-none"
+      >
+        <img src="./assets/images/Fingerprint-bro.png" alt="" />
+      </div>
+      <div class="bg-right d-lg-block d-none"></div>
+
+      <!-- mobile -->
+      <div class="bg-right--mobile d-lg-none d-block"></div>
+      <div class="bg-left--mobile d-lg-none d-block"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,352 @@
+@font-face {
+  font-family: IranSans;
+  src: url("../fonts/IRANSansX-Medium.woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: IranSans;
+  src: url("../fonts/IRANSansX-Bold.woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: IranSans;
+  src: url("../fonts/IRANSansX-Black.woff");
+  font-weight: 800;
+}
+
+html {
+  font-family: IranSans;
+  font-size: 14px;
+}
+body {
+  font-family: IranSans;
+  font-size: 14px;
+  direction: rtl;
+  color: #13213c;
+
+  background-color: #f0f0f0;
+}
+
+a {
+  /* all: unset; */
+
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+input {
+  border: none;
+  caret-color: #fdbb4b;
+}
+input:focus {
+  /*! background: red; */
+  outline: none;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+button {
+  border: none;
+}
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+.btn {
+  font-size: 1rem !important;
+}
+.custom-input:focus-within {
+  border-bottom: #fca40f solid 4px;
+  background-color: #fff8ed;
+}
+.custom-input:focus-within span {
+  opacity: 0.8;
+}
+.custom-input span {
+  font-weight: bold;
+
+  opacity: 0.6;
+}
+.custom-input input {
+  background-color: transparent;
+  width: 100%;
+  margin-top: 5px !important;
+  opacity: 0.8 !important;
+  font-weight: normal !important;
+}
+.custom-input {
+  transition: 0.4s;
+  background: #ffffff;
+  border: 1px solid rgba(252, 164, 15, 0.4);
+  border-radius: 15px;
+  width: 100%;
+  padding: 9px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+/* slider */
+.slider {
+  /* direction: ltr; */
+  /* display: flex; */
+  overflow: hidden;
+}
+
+.slick-list {
+  padding-top: 20px;
+}
+.slick-slide {
+  display: flex !important;
+  justify-content: center;
+}
+
+.slick-next:before {
+  transform: rotate(180deg);
+}
+.slick-prev:before,
+.slick-next:before {
+  border-radius: 100%;
+  opacity: 1 !important;
+  content: "";
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+
+  background: url("../icons/leftIcon.svg") no-repeat center;
+  background-size: cover;
+}
+.slick-slider {
+  position: initial;
+}
+
+.slick-next {
+  display: block;
+  right: unset;
+  bottom: unset;
+  left: 80px !important;
+  top: 45px !important;
+}
+.slick-prev {
+  display: block;
+  bottom: unset;
+  right: unset;
+  left: 30px !important;
+  top: 45px !important;
+}
+.slick-track {
+  display: flex !important;
+}
+
+/* sweet alert */
+.swal2-popup {
+  background: #ffffff !important;
+  padding-top: 10px !important;
+  border-radius: 30px !important;
+  padding-bottom: 55px !important;
+
+  width: 560px !important;
+  color: #13213c !important;
+  max-width: 85% !important;
+  padding-bottom: 75px !important;
+}
+.swal2-container {
+  background: rgba(125, 125, 125, 0.4);
+  backdrop-filter: blur(5px);
+}
+.swal2-confirm {
+  border-left: 1px solid #f3f3f3 !important;
+}
+
+.swal2-confirm,
+.swal2-cancel {
+  margin: 0 !important;
+  border-top: 1px solid #f3f3f3 !important;
+
+  background: transparent !important;
+  color: black !important;
+  font-weight: bold !important;
+  flex-basis: 50%;
+
+  height: 55px !important;
+}
+.swal2-confirm:focus,
+.swal2-cancel:focus {
+  box-shadow: none !important;
+}
+.swal2-actions {
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.editModal .swal2-confirm {
+  background: #f0f0f0 !important;
+  border-radius: 15px !important;
+  width: 90%;
+
+  color: white !important;
+  font-weight: bold !important;
+  background-color: #13213c !important;
+  margin-bottom: 35px !important;
+  flex-basis: 60px !important;
+}
+.editModal .swal2-cancel {
+  background: #f0f0f0 !important;
+  width: 90%;
+  margin-bottom: 14px !important;
+  color: #727272 !important;
+  font-size: 0.9rem !important;
+
+  border-radius: 15px !important;
+  flex-basis: 60px !important;
+}
+.editModal {
+  height: 518px;
+  width: 470px !important;
+  max-height: 90%;
+}
+.editModal .swal2-actions {
+  flex-direction: column-reverse;
+}
+
+/* utils */
+.-fs-11 * {
+  font-size: 0.9rem !important;
+}
+.fs-11 {
+  font-size: 1.1rem;
+}
+.invalid input,
+.invalid {
+  color: #f13939 !important;
+  border-color: #f13939 !important;
+}
+.text--orange {
+  color: #fca40f;
+}
+.button {
+  background-color: #13213c;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  width: 412px;
+  margin-top: 110px;
+  padding: 20px;
+  max-width: 100%;
+}
+.text--red {
+  color: #f13939;
+}
+.bg--orange {
+  background-color: #fca40f;
+}
+
+@media only screen and (max-width: 700px) {
+  .slick-arrow {
+    display: none !important;
+  }
+  .editModal .swal2-actions {
+    flex-direction: row-reverse !important;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 0 15px !important;
+  }
+  .editModal .swal2-actions button {
+    flex-basis: 50% !important;
+    margin-bottom: 18px !important;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .lg-margin-none {
+    margin-right: unset !important;
+    margin-left: unset !important;
+  }
+  .lg-text-right {
+    text-align: right !important;
+  }
+}
+
+/* radio */
+/* The container */
+.containerRadio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.containerRadio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 28px;
+  width: 28px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.containerRadio:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.containerRadio input:checked ~ .checkmark {
+  background-color: #f0f0f0;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.containerRadio input:checked ~ span {
+  color: #fca40f;
+}
+.containerRadio input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.containerRadio .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+  top: 8px;
+  left: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fca40f;
+}
