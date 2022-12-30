@@ -239,7 +239,7 @@ main {
   padding: 15px;
 }
 
-
 .mainTable {
-  padding-right: 20px;
+  padding-right: 20px !important;
+  padding-left: 82px !important;
 }
