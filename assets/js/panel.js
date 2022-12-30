@@ -115,7 +115,8 @@ const onEditUserClick = () => {
     } else {
       Swal.fire({
         confirmButtonText: "<span class='fw-bold'>امتحان دوباره</span>",
-        cancelButtonText: "<span class='fw-bold text-success'><span class='text--red'>لغو کردن</span></span>",
+        cancelButtonText:
+          "<span class='fw-bold text-success'><span class='text--red'>لغو کردن</span></span>",
         showCancelButton: true,
 
         html: `مشکلی در ثبت کاربر به وجود آمده`,
@@ -264,7 +265,8 @@ const onEditFactoryClick = () => {
     } else {
       Swal.fire({
         confirmButtonText: "<span class='fw-bold'>امتحان دوباره</span>",
-        cancelButtonText: "<span class='fw-bold text-success'><span class='text--red'>لغو کردن</span></span>",
+        cancelButtonText:
+          "<span class='fw-bold text-success'><span class='text--red'>لغو کردن</span></span>",
         showCancelButton: true,
 
         html: `مشکلی در ثبت کارخانه به وجود آمده`,
@@ -409,7 +411,8 @@ const onEditProdClick = () => {
     } else {
       Swal.fire({
         confirmButtonText: "<span class='fw-bold'>امتحان دوباره</span>",
-        cancelButtonText: "<span class='fw-bold text-success'><span class='text--red'>لغو کردن</span></span>",
+        cancelButtonText:
+          "<span class='fw-bold text-success'><span class='text--red'>لغو کردن</span></span>",
         showCancelButton: true,
 
         html: `مشکلی در ثبت محصول به وجود آمده`,
@@ -466,3 +469,13 @@ deleteProds.forEach((item) =>
   item.addEventListener("click", onDeleteProdClick)
 );
 editProds.forEach((item) => item.addEventListener("click", onEditProdClick));
+
+// table
+$(document).ready(function () {
+  $(".customTable").DataTable({
+    searching: false,
+    ordering: false,
+    paging: false,
+    info: false,
+  });
+});

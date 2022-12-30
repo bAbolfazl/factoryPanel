@@ -131,21 +131,6 @@ main {
   background-size: 100% 100%;
 }
 
-.button--orange {
-  text-align: center;
-  padding: 20px 35px;
-  background-color: #fca40f;
-  border-radius: 15px;
-  color: white;
-}
-
-.edit {
-  cursor: pointer;
-}
-.edit:hover svg {
-  transition: 0.3s;
-  stroke: #fab33c;
-}
 .input-code {
   width: 60px;
   height: 70px;
