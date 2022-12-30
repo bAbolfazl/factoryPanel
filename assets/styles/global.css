@@ -617,3 +617,7 @@ li {
   border-color: transparent;
   margin-bottom: 18px;
 }
+
+a:focus-visible {
+	outline: none;
+}
