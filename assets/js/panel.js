@@ -1,3 +1,4 @@
+// slider
 $(document).ready(function () {
   $(".slider").slick({
     slidesToShow: 4,
@@ -19,6 +20,16 @@ $(document).ready(function () {
         },
       },
     ],
+  });
+});
+
+// table
+$(document).ready(function () {
+  $(".customTable").DataTable({
+    searching: false,
+    ordering: false,
+    paging: false,
+    info: false,
   });
 });
 
@@ -470,12 +481,4 @@ deleteProds.forEach((item) =>
 );
 editProds.forEach((item) => item.addEventListener("click", onEditProdClick));
 
-// table
-$(document).ready(function () {
-  $(".customTable").DataTable({
-    searching: false,
-    ordering: false,
-    paging: false,
-    info: false,
-  });
-});
+
