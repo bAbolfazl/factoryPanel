@@ -43,7 +43,7 @@ const deleteFactories = document.querySelectorAll(".deleteFactory");
 const deleteProds = document.querySelectorAll(".deleteProd");
 const editProds = document.querySelectorAll(".editProd");
 
-const exitModal = document.querySelector(".exitModal");
+const exitModal = document.querySelectorAll(".exitModal");
 
 // funcs
 const onEditUserClick = () => {
@@ -493,4 +493,4 @@ deleteProds.forEach((item) =>
   item.addEventListener("click", onDeleteProdClick)
 );
 editProds.forEach((item) => item.addEventListener("click", onEditProdClick));
-exitModal.addEventListener("click", onExitModalClick);
+exitModal.forEach((item) => item.addEventListener("click", onExitModalClick));
