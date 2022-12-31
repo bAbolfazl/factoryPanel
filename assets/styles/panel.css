@@ -75,6 +75,18 @@ aside li.active #userIcon path:last-child {
   fill: white !important;
 }
 
+nav li.active #homeIcon2Mobile path:nth-child(2) {
+  fill: #a1a6b1 !important;
+  stroke: #a1a6b1 !important;
+}
+nav li.active #homeIcon2Mobile path:nth-child(3) {
+  fill: #13213C !important;
+  /* stroke: #a1a6b1 !important; */
+}
+nav li.active #homeIcon2Mobile path:nth-child(4) {
+  stroke: #a1a6b1 !important;
+}
+
 aside li.active #homeIcon2 path:first-child {
   fill: white !important;
   stroke: white !important;
