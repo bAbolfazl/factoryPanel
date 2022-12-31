@@ -619,5 +619,38 @@ li {
 }
 
 a:focus-visible {
-	outline: none;
+  outline: none;
+}
+.splash > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 560px;
+  max-height: 90%;
+}
+.splash {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.splash__brandName {
+  background: linear-gradient(180deg, #4788c8 0%, #3f5eab 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  text-align: center;
+  font-weight: 900;
+  font-size: 2.2rem;
+  margin-top: 15px;
 }
