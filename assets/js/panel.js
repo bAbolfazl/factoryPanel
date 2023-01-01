@@ -43,6 +43,8 @@ const deleteFactories = document.querySelectorAll(".deleteFactory");
 const deleteProds = document.querySelectorAll(".deleteProd");
 const editProds = document.querySelectorAll(".editProd");
 
+const exitModal = document.querySelectorAll(".exitModal");
+
 // funcs
 const onEditUserClick = () => {
   Swal.fire({
@@ -450,6 +452,17 @@ const onEditProdClick = () => {
     }
   });
 };
+
+const onExitModalClick = () => {
+  Swal.fire({
+    confirmButtonText: "<span class='fw-bold'>خیر</span>",
+    cancelButtonText:
+      "<span class='fw-bold text-success'><span class='text--red'>بله</span></span>",
+    showCancelButton: true,
+
+    html: `آیا قصد <span>خروج</span> دارید؟`,
+  });
+};
 const onDeleteProdClick = () => {
   Swal.fire({
     html: "آیا قصد دارید محصول <span class='text--orange'>میلگرد ۲۰</span> را از لیست محصولات حذف کنید؟",
@@ -480,5 +493,4 @@ deleteProds.forEach((item) =>
   item.addEventListener("click", onDeleteProdClick)
 );
 editProds.forEach((item) => item.addEventListener("click", onEditProdClick));
-
-
+exitModal.forEach((item) => item.addEventListener("click", onExitModalClick));
