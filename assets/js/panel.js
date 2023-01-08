@@ -364,7 +364,20 @@ const onEditProdClick = () => {
       // customSelect();
       // select
       // $(document).ready(function () {
-      $(".select2").select2({ dir: "rtl" });
+      $(".select2")
+        .select2({ dir: "rtl" })
+        // .on("select2:open", function () {
+        //   var container = $(".select2-container").last();
+        //   console.log("hi", container[0].style.top);
+
+        //   const topValue = container[0].style.top;
+        //   const x = topValue.split("").findIndex((x) => x == "p");
+
+        //   const final = `${Number(topValue.slice(0, x)) + 300}px`;
+          
+        //   container[0].style.top = final;
+        //   debugger
+        // });
       // });
     },
     // preConfirm: () => {

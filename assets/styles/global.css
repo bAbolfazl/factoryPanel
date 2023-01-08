@@ -69,7 +69,7 @@ li {
 .custom-input:focus-within span {
   opacity: 0.8;
 }
-.custom-input span {
+.custom-input > span {
   font-weight: bold;
 
   opacity: 0.6;
@@ -662,4 +662,36 @@ a:focus-visible {
   font-weight: 900;
   font-size: 2.2rem;
   margin-top: 15px;
+}
+
+.select2-selection__rendered {
+  color: #13213c !important;
+  opacity: 0.9;
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+.select2-results__option {
+  color: #989da8 !important;
+  height: 50px !important;
+  display: flex;
+  align-items: center;
+}
+.select2-dropdown {
+  background: #f0f0f0;
+  border-radius: 15px !important;
+  overflow: hidden !important;
+  padding: 12px;
+  border-color: transparent !important;
+  margin-top: 20px;
+}
+
+.select2-results__option--highlighted {
+  background-color: #fca40f !important;
+  border-radius: 7.5px !important;
+  color: white !important;
+  transition: 0.3s;
+}
+.select2-container--default .select2-results__option--selected {
+  background-color: transparent !important;
+  color: #989da8 !important;
 }
