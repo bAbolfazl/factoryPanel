@@ -1,6 +1,6 @@
 // slider
 $(document).ready(function () {
-  $(".slider").slick({
+  $(".slider")?.slick({
     slidesToShow: 4,
     infinite: false,
     rtl: true,
@@ -25,13 +25,17 @@ $(document).ready(function () {
 
 // table
 $(document).ready(function () {
-  $(".customTable").DataTable({
+  document.querySelector(".customTable")?.DataTable({
     searching: false,
     ordering: false,
     paging: false,
     info: false,
   });
 });
+
+// $(document).ready(function () {
+//   $(".select2")?.select2();
+// });
 
 // vars
 const editUsers = document.querySelectorAll(".editUser");
@@ -313,16 +317,18 @@ const onEditProdClick = () => {
     html: `
     <div class="d-flex flex-wrap">
     <div class="col-lg-6 col-12 px-2 mb-4 mb-lg-0">
-    <div class="custom-select custom-input" style="width:200px;">
-    <label class="">
+    <div class=" custom-input" style="width:100%;">
+    <label class="text-end w-100">
+    
     کارخانه مرجع
-  <select>
-    <option value="1">کارخانه مرجع را انتخاب کنید</option>
-    <option value="2">انبار شاهرودی۲</option>
-    <option value="3">انبار شاهرودی۳</option>
+    <div>
+    <select class="select2" name="state">
+    <option value="AL">کارخانه مرجع را انتخاب کنید</option>
+    <option value="WY">Wyoming</option>
   </select>
-  </label>
-</div>
+  </div>
+    </label>
+    </div>
     </div>
     <div class="col-lg-6 col-12 px-2">
     
@@ -355,7 +361,11 @@ const onEditProdClick = () => {
    
     `,
     didRender: () => {
-      customSelect();
+      // customSelect();
+      // select
+      // $(document).ready(function () {
+      $(".select2").select2({ dir: "rtl" });
+      // });
     },
     // preConfirm: () => {
     //   const userName = Swal.getPopup().querySelector("#userName").value;

@@ -619,5 +619,14 @@ li {
 }
 
 a:focus-visible {
-	outline: none;
+  outline: none;
+}
+
+.select2-container {
+  z-index: 99999999;
+  width: 100% !important;
+}
+
+.select2-selection {
+  border: none !important;
 }
