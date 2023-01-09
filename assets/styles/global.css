@@ -572,6 +572,7 @@ li {
 }
 .pageArrow--left {
   transform: rotate(180deg);
+  background-image: url('/assets/images/arrow.svg');
 }
 .pageArrow {
   transition: 0.3s;

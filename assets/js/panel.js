@@ -26,6 +26,7 @@ $(document).ready(function () {
 // table
 $(document).ready(function () {
   $(".customTable")?.DataTable({
+    dom: "Bfrtip",
     searching: false,
     ordering: false,
     paging: true,
@@ -33,28 +34,42 @@ $(document).ready(function () {
     pageLength: 10,
     language: {
       paginate: {
-        next: "&#8592;", // or '→'
-        previous: "&#8594;", // or '←'
+        previous: `<span class='pageArrow--left'><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+        <path d="M27.125 21H16.625" stroke="#13213C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M20.125 26.25L14.875 21L20.125 15.75" stroke="#13213C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg></span>`, // or '→'
+        next: `<span ><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+        <path d="M27.125 21H16.625" stroke="#13213C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M20.125 26.25L14.875 21L20.125 15.75" stroke="#13213C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg></span>`, // or '←'
       },
     },
-  });
-  document.querySelectorAll(".paginate_button").forEach((item) => {
-    item.innerText = e2p(item.innerText);
-  });
 
-  document.querySelector(
-    ".paginate_button.next"
-  ).innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
-  <path d="M27.125 21H16.625" stroke="#13213C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-  <path d="M20.125 26.25L14.875 21L20.125 15.75" stroke="#13213C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-</svg>`;
+    buttons: [
+      {
+        extend: "copyHtml5",
+        text: '<i class="fa fa-files-o"></i>',
+        titleAttr: "next",
+      },
+    ],
+  });
+  //   document.querySelectorAll(".paginate_button").forEach((item) => {
+  //     item.innerText = e2p(item.innerText);
+  //   });
 
-  document.querySelector(
-    ".paginate_button.previous"
-  ).innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg)" width="42" height="42" viewBox="0 0 42 42" fill="none">
-  <path d="M27.125 21H16.625" stroke="#13213C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-  <path d="M20.125 26.25L14.875 21L20.125 15.75" stroke="#13213C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-</svg>`;
+  //   document.querySelector(
+  //     ".paginate_button.next"
+  //   ).innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+  //   <path d="M27.125 21H16.625" stroke="#13213C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+  //   <path d="M20.125 26.25L14.875 21L20.125 15.75" stroke="#13213C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+  // </svg>`;
+
+  //   document.querySelector(
+  //     ".paginate_button.previous"
+  //   ).innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg)" width="42" height="42" viewBox="0 0 42 42" fill="none">
+  //   <path d="M27.125 21H16.625" stroke="#13213C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+  //   <path d="M20.125 26.25L14.875 21L20.125 15.75" stroke="#13213C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+  // </svg>`;
   // });
 });
 
