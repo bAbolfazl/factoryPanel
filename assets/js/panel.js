@@ -25,12 +25,37 @@ $(document).ready(function () {
 
 // table
 $(document).ready(function () {
-  document.querySelector(".customTable")?.DataTable({
+  $(".customTable")?.DataTable({
     searching: false,
     ordering: false,
-    paging: false,
+    paging: true,
     info: false,
+    pageLength: 10,
+    language: {
+      paginate: {
+        next: "&#8592;", // or '→'
+        previous: "&#8594;", // or '←'
+      },
+    },
   });
+  document.querySelectorAll(".paginate_button").forEach((item) => {
+    item.innerText = e2p(item.innerText);
+  });
+
+  document.querySelector(
+    ".paginate_button.next"
+  ).innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+  <path d="M27.125 21H16.625" stroke="#13213C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M20.125 26.25L14.875 21L20.125 15.75" stroke="#13213C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>`;
+
+  document.querySelector(
+    ".paginate_button.previous"
+  ).innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg)" width="42" height="42" viewBox="0 0 42 42" fill="none">
+  <path d="M27.125 21H16.625" stroke="#13213C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M20.125 26.25L14.875 21L20.125 15.75" stroke="#13213C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>`;
+  // });
 });
 
 // $(document).ready(function () {
@@ -364,20 +389,19 @@ const onEditProdClick = () => {
       // customSelect();
       // select
       // $(document).ready(function () {
-      $(".select2")
-        .select2({ dir: "rtl" })
-        // .on("select2:open", function () {
-        //   var container = $(".select2-container").last();
-        //   console.log("hi", container[0].style.top);
+      $(".select2").select2({ dir: "rtl" });
+      // .on("select2:open", function () {
+      //   var container = $(".select2-container").last();
+      //   console.log("hi", container[0].style.top);
 
-        //   const topValue = container[0].style.top;
-        //   const x = topValue.split("").findIndex((x) => x == "p");
+      //   const topValue = container[0].style.top;
+      //   const x = topValue.split("").findIndex((x) => x == "p");
 
-        //   const final = `${Number(topValue.slice(0, x)) + 300}px`;
-          
-        //   container[0].style.top = final;
-        //   debugger
-        // });
+      //   const final = `${Number(topValue.slice(0, x)) + 300}px`;
+
+      //   container[0].style.top = final;
+      //   debugger
+      // });
       // });
     },
     // preConfirm: () => {

@@ -564,11 +564,6 @@ li {
   height: 84px;
 }
 
-.pageNo:hover,
-.pageNo.active {
-  color: white;
-  background: #fca40f;
-}
 .pageArrow:hover svg path {
   stroke: #fff;
 }
@@ -589,19 +584,73 @@ li {
   align-items: center;
   justify-content: center;
 }
-.pageNo {
+.pageNo,
+.paginate_button {
   transition: 0.3s;
-  cursor: pointer;
-  border: 2px solid #fca40f;
-  border-radius: 100%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fca40f;
+  cursor: pointer !important;
+  border: 2px solid #fca40f !important;
+  border-radius: 100% !important;
+  width: 50px !important;
+  height: 50px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #fca40f !important;
 }
 
+.pageNo:hover,
+.pageNo.active,
+.paginate_button.current,
+.paginate_button:hover {
+  color: white !important;
+  background: #fca40f !important;
+}
+.paginate_button:hover svg path {
+  stroke: white !important;
+  /* fill: white !important; */
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  color: white !important;
+}
+
+.dataTables_paginate {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+  margin-top: 40px;
+}
+.dataTables_paginate > span {
+  display: flex !important;
+  gap: 10px;
+  align-items: center;
+}
+/* .dataTables_wrapper .dataTables_paginate .paginate_button.disabled, */
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+  color: white !important;
+}
+
+.paginate_button.previous:hover,
+.paginate_button.next:hover {
+  background-color: #13213c !important;
+  border-color: #13213c !important;
+  outline: none !important;
+}
+
+.paginate_button.next,
+.paginate_button.previous {
+  width: 35px !important;
+  height: 35px !important;
+
+  font-size: 1.5rem;
+  padding: 0 !important;
+}
+.dataTables_length {
+  display: none;
+}
 .tableCard:hover {
   border: 1px solid rgba(252, 164, 15, 0.6);
 }
