@@ -572,7 +572,7 @@ li {
 }
 .pageArrow--left {
   transform: rotate(180deg);
-  background-image: url('/assets/images/arrow.svg');
+  background-image: url("/assets/images/arrow.svg");
 }
 .pageArrow {
   transition: 0.3s;
@@ -586,7 +586,8 @@ li {
   justify-content: center;
 }
 .pageNo,
-.paginate_button {
+.paginate_button,
+.ellipsis {
   transition: 0.3s;
   cursor: pointer !important;
   border: 2px solid #fca40f !important;
@@ -637,7 +638,6 @@ li {
 .paginate_button.previous:hover,
 .paginate_button.next:hover {
   background-color: #13213c !important;
-  border-color: #13213c !important;
   outline: none !important;
 }
 
@@ -744,4 +744,12 @@ a:focus-visible {
 .select2-container--default .select2-results__option--selected {
   background-color: transparent !important;
   color: #989da8 !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  color: #fca40f !important;
+}
+.paginate_button.previous,
+.paginate_button.next {
+  border-color: #13213c !important;
 }

@@ -31,7 +31,7 @@ $(document).ready(function () {
     ordering: false,
     paging: true,
     info: false,
-    pageLength: 10,
+    pageLength: 5,
     language: {
       paginate: {
         previous: `<span class='pageArrow--left'><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
