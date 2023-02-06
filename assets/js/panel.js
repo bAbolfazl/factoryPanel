@@ -357,7 +357,7 @@ const onEditProdClick = () => {
     html: `
     <div class="d-flex flex-wrap">
     <div class="col-lg-6 col-12 px-2 mb-4 mb-lg-0">
-    <div class=" custom-input" style="width:100%;">
+    <div class=" custom-input" style="width:500px;">
     <label class="text-end w-100">
     
     کارخانه مرجع
